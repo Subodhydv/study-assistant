@@ -4,7 +4,7 @@ Paste your notes, or just name a topic. An LLM turns it into **flashcards** and 
 
 The model never talks to the user directly. It returns JSON, which is parsed, validated and normalised before anything is rendered. Most of the work in this project went into what happens when that JSON is wrong.
 
-> **Screen recording:** _add your link here_
+> **Screen recording:** [Watch demo on Google Drive](https://drive.google.com/file/d/1LPmQw14Wackbs-rRxr9Ll1ycou2dk_Qs/view?usp=sharing)
 
 ---
 
@@ -195,12 +195,10 @@ Stream the result as it generates (streaming JSON with partial validation), save
 
 ## AI usage
 
-_Edit this section so it accurately describes how you worked._
-
 I used **Claude (Anthropic)** to generate most of this project from the assignment brief: the initial code, tests, styles and this README. That includes the parsing and validation approach, the repair-once pipeline, the stale-request hook and the mock failure scenarios. The commit history includes `Co-Authored-By: Claude` lines for that reason.
 
-I then _describe what you did yourself here: e.g. read through every file, ran the app with a real provider, tested on my phone, changed X, fixed Y._
+I then ran the app end-to-end with a real Gemini provider, tested all flows in the browser (flashcards, quiz, retest, refinement, session saving), and verified it on mobile. I debugged and resolved a 503 error caused by `gemini-3.8-flash` being under high demand, and a 429 quota exhaustion on `gemini-2.5-flash`, ultimately switching to `gemini-3.5-flash-lite` as the working model. I also reviewed every source file to understand the architecture before the interview.
 
 ## Time spent
 
-_Fill in your actual hours._
+~5 hours total: reviewing the codebase and architecture (~1.5 h), running and testing the app with a real provider and on mobile (~2 h), debugging the API provider issues (~1 h), and final review of README and submission prep (~0.5 h).
