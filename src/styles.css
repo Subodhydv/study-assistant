@@ -1553,6 +1553,11 @@ kbd {
     display: none;
   }
 
+  .btn-sm,
+  .chip {
+    min-height: 2.75rem;
+  }
+
   .study-actions {
     width: 100%;
   }
