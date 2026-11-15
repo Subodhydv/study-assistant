@@ -350,17 +350,20 @@ kbd {
   padding: 0.7rem 0.9rem;
   border-radius: var(--radius-sm);
   background: var(--paper);
-  border-left: 4px solid var(--highlight);
   font-size: 0.95rem;
   color: var(--ink-soft);
 }
 
+/* The label is "highlighted", like a marker pen on paper. */
 .banner strong {
-  color: var(--ink);
+  padding: 0 0.25em;
+  border-radius: 2px;
+  background: var(--highlight);
+  color: var(--highlight-ink);
 }
 
 .banner-bad {
-  border-left-color: var(--bad);
+  background: var(--bad-soft);
   color: var(--ink);
 }
 
@@ -675,7 +678,7 @@ kbd {
   padding: 1.1rem 1.2rem;
   border-radius: var(--radius);
   background: var(--paper);
-  border-left: 5px solid var(--bad);
+  border: 1.5px solid var(--bad);
   box-shadow: var(--shadow-card);
 }
 
@@ -715,8 +718,6 @@ kbd {
 
 .error-box.is-compact {
   box-shadow: none;
-  border: 1px solid var(--line);
-  border-left: 5px solid var(--bad);
 }
 
 .field-error {
@@ -1378,11 +1379,10 @@ kbd {
   padding: 0.85rem 1rem;
   border-radius: var(--radius-sm);
   background: var(--paper);
-  border-left: 4px solid var(--good);
 }
 
 .review-item.is-wrong {
-  border-left-color: var(--bad);
+  background: var(--bad-soft);
 }
 
 .review-icon {
@@ -1490,8 +1490,8 @@ kbd {
 }
 
 .session-item.is-current {
-  border-color: var(--ink-soft);
-  box-shadow: inset 4px 0 0 var(--highlight);
+  border-color: var(--ink);
+  background: var(--desk);
 }
 
 .session-open {
