@@ -17,7 +17,12 @@ export default function Header({ theme, onToggleTheme, savedCount, onOpenSaved, 
         <span className="brand">{brand}</span>
       )}
       <nav className="header-actions" aria-label="App">
-        <button type="button" className="btn btn-ghost" onClick={onOpenSaved}>
+        <button
+          type="button"
+          className="btn btn-ghost"
+          onClick={onOpenSaved}
+          aria-label={savedCount > 0 ? `Saved sets (${savedCount})` : 'Saved sets'}
+        >
           <IconStack />
           <span>Saved sets</span>
           {savedCount > 0 && <span className="count-pill">{savedCount}</span>}
